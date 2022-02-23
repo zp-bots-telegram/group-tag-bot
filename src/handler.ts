@@ -4,6 +4,7 @@ import { Telegraf } from 'telegraf';
 import { getEnv } from 'shared/env';
 import { devSetup } from 'devSetup';
 import { registerCommands } from 'command/commands';
+import { registerEvent } from 'event/events';
 
 export async function handler() {
   const token = process.env.BOT_TOKEN;
@@ -17,6 +18,7 @@ export async function handler() {
 
   const bot = new Telegraf(token);
 
+  registerEvent(bot);
   registerCommands(bot);
 
   const host = getEnv('host');
