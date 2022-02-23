@@ -3,6 +3,7 @@ import express, { Request, Response } from 'express';
 import { Telegraf } from 'telegraf';
 import { getEnv } from 'shared/env';
 import { devSetup } from 'devSetup';
+import { registerCommands } from 'command/commands';
 
 export async function handler() {
   const token = process.env.BOT_TOKEN;
@@ -15,6 +16,8 @@ export async function handler() {
   }
 
   const bot = new Telegraf(token);
+
+  registerCommands(bot);
 
   const host = getEnv('host');
   const secretPath = `/telegraf/${bot.secretPathComponent()}`;
