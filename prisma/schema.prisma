@@ -1,0 +1,42 @@
+datasource db {
+  url      = env("DATABASE_URL")
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../node_modules/@prisma/client/generated"
+}
+
+model Group {
+  groupId   BigInt   @id
+  users     User[]
+  tags      Tag[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model User {
+  userId     BigInt     @id
+  groups     Group[]
+  tags       Tag[]
+  username   String?
+  firstName  String?
+  lastName   String?
+  lastSeen   DateTime   @default(now())
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+}
+
+model Tag {
+  tagId      String     @id @default(uuid())
+  name       String
+  group      Group      @relation(fields: [groupId], references: [groupId])
+  groupId    BigInt
+  users      User[]
+  lastUsed   DateTime?
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+
+  @@unique([name, groupId])
+}
