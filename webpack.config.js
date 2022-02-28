@@ -25,5 +25,8 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  externals: {
+    _http_common: 'commonjs2 _http_common'
   }
 };
