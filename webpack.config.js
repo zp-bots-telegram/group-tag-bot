@@ -34,6 +34,10 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
+          from: 'prisma/migrations/**/*',
+          to: './'
+        },
+        {
           from: 'node_modules/@prisma/client/generated/schema.prisma',
           to: './schema.prisma'
         },
