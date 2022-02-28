@@ -1,5 +1,6 @@
 const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -28,5 +29,23 @@ module.exports = {
   },
   externals: {
     _http_common: 'commonjs2 _http_common'
-  }
+  },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: 'node_modules/@prisma/client/generated/schema.prisma',
+          to: './schema.prisma'
+        },
+        {
+          from: 'node_modules/@prisma/client/generated/*.prisma',
+          to: './'
+        },
+        {
+          from: 'node_modules/@prisma/client/generated/*.node',
+          to: './'
+        }
+      ]
+    })
+  ]
 };
