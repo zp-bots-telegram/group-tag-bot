@@ -1,5 +1,12 @@
 Change log
 
+# [1.1.0](https://github.com/zp-bots-telegram/group-tag-bot/compare/v1.0.0...v1.1.0) (2022-03-08)
+
+
+### Features
+
+* add data migration logic for old JSON data store ([7625e78](https://github.com/zp-bots-telegram/group-tag-bot/commit/7625e78cbeee3f3b0ed6584381833a6b51b227f9))
+
 # 1.0.0 (2022-02-28)
 
 
