@@ -12,6 +12,8 @@ model Group {
   groupId   BigInt   @id
   users     User[]
   tags      Tag[]
+  broadcasts Boolean @default(true)
+  adminOnly Boolean @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
