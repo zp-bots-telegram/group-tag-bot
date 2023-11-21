@@ -1,5 +1,12 @@
 Change log
 
+## [1.1.4](https://github.com/zp-bots-telegram/group-tag-bot/compare/v1.1.3...v1.1.4) (2023-11-21)
+
+
+### Bug Fixes
+
+* docker copying generated prisma files to incorrect place on disk ([342cdc2](https://github.com/zp-bots-telegram/group-tag-bot/commit/342cdc2101000564229e7653bd28a1f8d8897001))
+
 ## [1.1.3](https://github.com/zp-bots-telegram/group-tag-bot/compare/v1.1.2...v1.1.3) (2023-11-21)
 
 
