@@ -1,5 +1,12 @@
 Change log
 
+## [1.1.2](https://github.com/zp-bots-telegram/group-tag-bot/compare/v1.1.1...v1.1.2) (2023-11-21)
+
+
+### Bug Fixes
+
+* don't copy node_modules into docker build ([3d43a88](https://github.com/zp-bots-telegram/group-tag-bot/commit/3d43a881badc20928bbb3ae662b331bb88654c91))
+
 ## [1.1.1](https://github.com/zp-bots-telegram/group-tag-bot/compare/v1.1.0...v1.1.1) (2023-11-21)
 
 
