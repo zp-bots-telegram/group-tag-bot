@@ -22,10 +22,9 @@ export function infoCommand(bot: Telegraf) {
     const name = match[1];
     const groupId = msg.chat.id;
 
-    const tag = await prisma.tag.findUnique({
+    const tag = await prisma.tag.findUniqueOrThrow({
       select: { users: true, name: true },
-      where: { name_groupId: { groupId, name } },
-      rejectOnNotFound: false
+      where: { name_groupId: { groupId, name } }
     });
     if (!tag) {
       await ctx.reply('Tag not found');

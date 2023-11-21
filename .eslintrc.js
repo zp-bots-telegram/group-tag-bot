@@ -25,6 +25,7 @@ module.exports = {
     '@typescript-eslint/prefer-interface': 'off',
     '@typescript-eslint/no-non-null-assertion': 'error',
     '@typescript-eslint/no-empty-function': [1, { allow: ['arrowFunctions'] }],
+    'import/no-unresolved': 'off',
     'jest/no-standalone-expect': [
       'error',
       { additionalTestBlockFunctions: ['each.test', 'each.it'] }
