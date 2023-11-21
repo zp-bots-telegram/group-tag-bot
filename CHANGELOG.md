@@ -1,5 +1,12 @@
 Change log
 
+## [1.1.1](https://github.com/zp-bots-telegram/group-tag-bot/compare/v1.1.0...v1.1.1) (2023-11-21)
+
+
+### Bug Fixes
+
+* bump node version and all dependencies to fix prisma ([e5b3593](https://github.com/zp-bots-telegram/group-tag-bot/commit/e5b3593850688918aee2a92d4ec85bee36cf20e5))
+
 # [1.1.0](https://github.com/zp-bots-telegram/group-tag-bot/compare/v1.0.0...v1.1.0) (2022-03-08)
 
 
