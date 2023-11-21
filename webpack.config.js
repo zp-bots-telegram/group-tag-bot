@@ -38,9 +38,13 @@ module.exports = {
           to: './'
         },
         {
+          from: 'node_modules/@prisma/client/generated/schema.prisma',
+          to: './schema.prisma'
+        },
+        {
           from: 'node_modules/@prisma/client/generated/*',
           to: './'
-        },
+        }
       ]
     })
   ]

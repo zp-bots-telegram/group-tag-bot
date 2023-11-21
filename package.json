@@ -9,7 +9,7 @@
   "main": "src/handler.ts",
   "scripts": {
     "postinstall": "sh -c 'if command -v husky; then is-ci || husky install; fi;'",
-    "build": "webpack --progress --color",
+    "build": "rimraf dist && webpack --progress --color",
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --fix --ext .ts",
     "prettier:format": "prettier --config .prettierrc \"src/**/*.ts\" --write",
