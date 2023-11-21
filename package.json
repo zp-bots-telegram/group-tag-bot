@@ -8,7 +8,7 @@
   "description": "Telegram Group Tag Bot",
   "main": "src/handler.ts",
   "scripts": {
-    "postinstall": "is-ci || husky install",
+    "postinstall": "sh -c 'if command -v husky; then is-ci || husky install; fi;'",
     "build": "webpack --progress --color",
     "lint": "eslint ./src --ext .ts",
     "lint:fix": "eslint ./src --fix --ext .ts",
